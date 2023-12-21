@@ -1,12 +1,48 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root .theme-dark {
+  --accent-color: #ff0070;
+  --main-color: #000028;
+  --logo-color: #db00ff;
+  --arcticle-color: #f1b2ce;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --main-color: #000028;
+    --logo-color: #db00ff;
+    --arcticle-color: #f1b2ce;
+  }
+}
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  background-image: url(../images/cover-image-dark.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 10px cover;
+  background-attachment: fixed;
+}
+
+.page.theme_dark .design::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px 2px var(--accent-color);
+}
+
+.page.theme_dark .rec {
+  position: relative;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  text-align: right;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
+  margin-block-end: 40.5;
+  margin-inline-end: 2.96px;
+  font-family: inherit;
 }

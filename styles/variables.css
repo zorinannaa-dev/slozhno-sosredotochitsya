@@ -2,3 +2,151 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+@media (min-width: 768px) {
+  .page {
+    margin: 20px;
+    min-width: 768px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .header__theme-menu-list {
+    margin-block-start: 147.5px;
+  }
+
+  .design {
+    margin-block-start: -2vh;
+  }
+
+  .main__title {
+    margin-block-start: 174.5px;
+    font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  }
+
+  .main__paragraph {
+    width: 364px;
+  }
+
+  .main__paragraph__div {
+    margin-block-start: 162px;
+    margin-block-end: 183px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .arcticle__columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .arctical__title__columns {
+    margin-inline-end: 20px;
+    padding-block-start: 0px;
+  }
+
+  .arcticle__rows {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arcticle__title_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .image {
+    object-fit: cover;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    grid-auto-flow: dense;
+    align-items: stretch;
+    grid-template-areas:
+      "block-1 block-1 block-2"
+      "block-3 block-4 block-2"
+      "block-3 block-5 block-5"
+      "block-3 block-5 block-5";
+  }
+
+  .block-1 {
+    grid-area: block-1;
+  }
+
+  .block-2 {
+    grid-area: block-2;
+  }
+
+  .block-3 {
+    grid-area: block-3;
+  }
+
+  .block-4 {
+    grid-area: block-4;
+  }
+
+  .block-5 {
+    grid-area: block-5;
+  }
+
+  .design-footer {
+    margin-inline-start: 95vw;
+  }
+
+  .design-footer-bottom {
+    margin-block-start: -5vh;
+    margin-inline-start: -1vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    margin: 20px;
+    min-width: 1024px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .decorative__nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-inline-start: 30vw;
+  }
+
+  .main__paragraph__div {
+    margin-block-end: 134px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 36px;
+    justify-content: center;
+    align-self: flex-start;
+    margin-block-start: 0px;
+  }
+
+  .design-bottom {
+    margin: 0;
+  }
+
+  .paragraph__column__desktop {
+    display: flex;
+    gap: 20px;
+  }
+
+  .design-footer {
+    margin-inline-start: 96vw;
+  }
+
+  .design-footer-bottom {
+    margin-block-start: -5vh;
+    margin-inline-start: -1vw;
+  }
+}

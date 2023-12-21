@@ -1,5 +1,229 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+:root {
+  --accent-color: #ff0070;
+  --main-color: #000028;
+  --logo-color: #db00ff;
+  --arcticle-color: #f1b2ce;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--main-color);
+  font-family: "IBM Plex Mono", sans-serif;
+  min-width: 375px;
+  margin: auto;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 10px cover;
+  background-attachment: fixed;
+}
+
+.header {
+  padding: 10px;
+}
+
+.decorative {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rec {
+  position: relative;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  text-align: right;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
+  margin-block-end: 40.5;
+  margin-inline-end: 2.96px;
+  font-family: inherit;
+}
+
+.design {
+  width: 25.038px;
+  height: 24.999px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.design::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px 2px var(--accent-color);
+}
+
+.header__theme-menu-list {
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  text-align: right;
+  list-style-type: none;
+  margin-block-end: 66.5px;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  background-color: transparent;
+  border: none;
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+}
+
+.header__theme-menu-button_active:disabled {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.main__title {
+  color: var(--logo-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  text-align: left;
+  margin-inline-start: 10px;
+  margin-block-end: 55px;
+}
+
+.main__paragraph {
+  margin-block-end: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.design-bottom {
+  width: 25.038px;
+  height: 24.999px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  margin-block-start: 36vh;
+}
+
+.main {
+  margin: 0;
+  background-color: var(--main-color);
+  margin: 10px;
+}
+
+.article__title {
+  position: relative;
+  color: var(--accent-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  margin-block-start: 40px;
+}
+
+.title-decor {
+  margin-block-start: 20px;
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.arctical__paragraph {
+  color: var(--arcticle-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+}
+
+.arctical__paragraph:last-child {
+  margin-block-end: 50px;
+}
+
+.accent-word {
+  text-decoration: none;
+  text-shadow: 1px 1px var(--accent-color);
+}
+
+.accent-word:hover {
+  text-decoration: underline;
+}
+
+.accent-word:focus-visible {
+  outline: 1px solid var(--arcticle-color);
+}
+
+.image {
+  width: 100%;
+}
+
+.footer {
+  margin-block-start: 40px;
+}
+
+.footer__logo {
+  display: flex;
+  min-width: 375px;
+  min-height: 667px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--logo-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: inherit;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  display: flex;
+  flex-direction: column;
+}
+
+.design-footer {
+  width: 25.038px;
+  height: 24.999px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  margin-inline-start: 90vw;
+}
+
+.design-footer-bottom {
+  width: 25.038px;
+  height: 24.999px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  margin-block-start: -5vh;
+  margin-inline-start: 3vw;
 }
