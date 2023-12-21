@@ -32,6 +32,7 @@ button:hover {
 
 .header {
   padding: 10px;
+  height: 100vh;
 }
 
 .decorative {
@@ -51,7 +52,6 @@ button:hover {
   line-height: 25px; /* 138.889% */
   margin-block-end: 40.5;
   margin-inline-end: 2.96px;
-  font-family: inherit;
 }
 
 .design {
@@ -126,11 +126,10 @@ button:hover {
   height: 24.999px;
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  margin-block-start: 36vh;
+  margin-block-start: 21vh;
 }
 
 .main {
-  margin: 0;
   background-color: var(--main-color);
   margin: 10px;
 }
@@ -189,6 +188,7 @@ button:hover {
 
 .footer {
   margin-block-start: 40px;
+  height: 100vh;
 }
 
 .footer__logo {
@@ -207,8 +207,6 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 95.7px */
-  display: flex;
-  flex-direction: column;
 }
 
 .design-footer {
