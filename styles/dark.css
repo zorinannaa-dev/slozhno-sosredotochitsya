@@ -46,17 +46,17 @@
   margin-inline-end: 2.96px;
 }
 
-.design-bottom {
+.page.theme_dark .design-bottom {
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
 }
 
-.design-footer {
+.page.theme_dark .design-footer {
   border-right: 1px solid var(--accent-color);
   border-top: 1px solid var(--accent-color);
 }
 
-.design-footer-bottom {
+.page.theme_dark .design-footer-bottom {
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
 }

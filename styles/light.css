@@ -44,7 +44,7 @@
   overflow: hidden;
 }
 
-.design-bottom {
+.page.theme_light .design-bottom {
   border-left: 1px solid var(--arcticle-color);
   border-bottom: 1px solid var(--arcticle-color);
 }
@@ -63,12 +63,12 @@
   text-shadow: 4px 4px 0px var(--accent-color);
 }
 
-.design-footer {
+.page.theme_light .design-footer {
   border-right: 1px solid var(--arcticle-color);
   border-top: 1px solid var(--arcticle-color);
 }
 
-.design-footer-bottom {
+.page.theme_light .design-footer-bottom {
   border-left: 1px solid var(--arcticle-color);
   border-bottom: 1px solid var(--arcticle-color);
 }
