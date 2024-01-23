@@ -97,6 +97,10 @@ button:hover {
   padding-inline-end: 13px;
 }
 
+.header__theme-menu-item:first-child {
+  margin-block-start: 41.5px;
+}
+
 .header__theme-menu-button_active:disabled {
   border: 1px solid var(--accent-color);
   pointer-events: none;
@@ -126,7 +130,7 @@ button:hover {
   height: 24.999px;
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  margin-block-start: 21vh;
+  margin-block-start: 16vh;
 }
 
 .main {

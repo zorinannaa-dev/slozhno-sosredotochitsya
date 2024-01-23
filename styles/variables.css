@@ -2,12 +2,20 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --accent-color: #ff0070;
+  --main-color: #000028;
+  --logo-color: #db00ff;
+  --arcticle-color: #f1b2ce;
+}
+
 @media (min-width: 768px) {
   .page {
     margin: 20px;
     min-width: 768px;
     background-position: center;
     background-size: cover;
+    height: 100vh;
   }
 
   .design {
@@ -30,7 +38,7 @@
   }
 
   .design-bottom {
-    margin-block-start: -28vh;
+    margin-block-start: -33vh;
   }
 
   .arcticle__columns {
@@ -98,7 +106,7 @@
   }
 
   .design-footer-bottom {
-    margin-block-start: 0vh;
+    margin-block-start: -2vh;
     margin-inline-start: -1vw;
   }
 }
@@ -109,6 +117,7 @@
     min-width: 1024px;
     background-position: center;
     background-size: cover;
+    height: 100vh;
   }
 
   .decorative__nav {
@@ -117,6 +126,10 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-inline-start: 30vw;
+  }
+
+  .header__theme-menu-item:first-child {
+    margin-block-start: 0px;
   }
 
   .main__title {
@@ -137,7 +150,7 @@
 
   .design-bottom {
     margin: 0;
-    margin-block-start: -6vh;
+    margin-block-start: -10vh;
   }
 
   .paragraph__column__desktop {
@@ -150,7 +163,7 @@
   }
 
   .design-footer-bottom {
-    margin-block-start: 25vh;
+    margin-block-start: 23vh;
     margin-inline-start: 0vw;
   }
 }
