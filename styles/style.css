@@ -146,7 +146,7 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  margin-block-start: -17px;
+  margin-block-start: 40px;
 }
 
 .title-decor {
@@ -182,7 +182,7 @@ button:hover {
 }
 
 .arctical__paragraph-indent {
-  margin-block-end: 67px;
+  margin-block-end: 50px;
 }
 
 .arctical__paragraph-indent-less {
