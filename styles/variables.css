@@ -11,19 +11,29 @@
 
 @media (min-width: 768px) {
   .page {
-    margin: 20px;
-    min-width: 768px;
+    /* min-width: 768px; */
     background-position: center;
     background-size: cover;
     height: 100vh;
   }
 
-  .design {
-    margin-block-start: -2vh;
+  .decorative {
+    align-items: flex-end;
+    margin-block-start: 11px;
+    margin-inline-end: 9px;
+  }
+
+  .header__theme-menu-item:first-child {
+    margin-block-start: 148px;
+  }
+
+  .header__theme-menu-list {
+    margin-inline-end: 11px;
   }
 
   .main__title {
-    font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+    margin-block-start: 172px;
+    margin-inline-start: -10px;
   }
 
   .main__paragraph {
@@ -31,14 +41,16 @@
   }
 
   .main__paragraph__div {
-    margin-block-start: 162px;
-    margin-block-end: 183px;
+    margin-block-start: 141px;
+    margin-block-end: 412px;
+    margin-inline-end: 10px;
     display: flex;
     justify-content: flex-end;
   }
 
   .design-bottom {
     margin-block-start: -33vh;
+    margin-inline-start: 11px;
   }
 
   .arcticle__columns {
@@ -49,8 +61,17 @@
   }
 
   .arctical__title__columns {
-    margin-inline-end: 20px;
-    padding-block-start: 0px;
+    padding-block-start: 10px;
+    margin-inline-start: 11px;
+    margin-inline-end: -9px;
+    width: 50%;
+    height: 100%;
+  }
+
+  .title-and-article {
+    margin-inline-start: 29px;
+    margin-inline-end: 10px;
+    width: 100%;
   }
 
   .arcticle__rows {
@@ -60,7 +81,27 @@
 
   .arcticle__title_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    margin-block-start: 29px;
+    margin-inline-start: 10px;
+  }
+
+  .paragraph__column__desktop {
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+  }
+
+  .arctical-indent {
+    margin-block-start: -19px;
+  }
+
+  .arctical__paragraph-indent-less {
+    margin-block-end: 58px;
+  }
+
+  .title-decor-images {
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
   }
 
   .image {
@@ -70,8 +111,7 @@
   .images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
+    gap: 15px;
     grid-auto-flow: dense;
     align-items: stretch;
     grid-template-areas:
@@ -79,6 +119,9 @@
       "block-3 block-4 block-2"
       "block-3 block-5 block-5"
       "block-3 block-5 block-5";
+    margin-block-start: 10px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
   }
 
   .block-1 {
@@ -102,30 +145,38 @@
   }
 
   .design-footer {
-    margin-inline-start: 95vw;
+    margin-inline-start: 94vw;
+    margin-block-start: 76px;
+  }
+
+  .footer__logo {
+    margin-block-start: 134px;
   }
 
   .design-footer-bottom {
-    margin-block-start: -2vh;
-    margin-inline-start: -1vw;
+    margin-block-start: 13vh;
+    margin-inline-start: 3vw;
   }
 }
 
 @media (min-width: 1024px) {
   .page {
-    margin: 20px;
-    min-width: 1024px;
     background-position: center;
     background-size: cover;
     height: 100vh;
   }
 
+  .decorative {
+    margin-inline-end: 10px;
+    margin-block-start: 8px;
+  }
+
   .decorative__nav {
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: space-between;
-    margin-inline-start: 30vw;
+    margin-inline-start: 38vw;
   }
 
   .header__theme-menu-item:first-child {
@@ -133,37 +184,74 @@
   }
 
   .main__title {
-    margin-block-start: 274.5px;
+    font-size: clamp(1.125rem, -3.8947rem + 21.4176vw, 9.8125rem);
+    margin-block-start: 209px;
   }
 
   .main__paragraph__div {
-    margin-block-end: 134px;
+    margin-block-start: 94px;
+    margin-inline-end: 10px;
+    margin-block-end: 100px;
+  }
+
+  .main__paragraph {
+    width: 491px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 36px;
+    gap: 10px;
     justify-content: center;
     align-self: flex-start;
     margin-block-start: 0px;
   }
 
   .design-bottom {
-    margin: 0;
     margin-block-start: -10vh;
   }
 
+  .title-decor {
+    margin-inline-start: -7px;
+  }
+
+  .arctical__paragraph {
+    margin-inline-start: -7px;
+  }
+
+  .title-decor-thin {
+    margin-inline-start: -7px;
+  }
+
+  .title-decor-images {
+    margin-inline-start: 10px;
+  }
+
+  .arcticle__title_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .paragraph__column__desktop {
+    margin-inline-start: 17px;
     display: flex;
-    gap: 20px;
+    gap: 28px;
+  }
+
+  .arcticle-desktop {
+    width: 100%;
   }
 
   .design-footer {
     margin-inline-start: 96vw;
+    margin-block-start: 75px;
+  }
+
+  .footer__logo {
+    font-size: clamp(1.125rem, -3.8947rem + 21.4176vw, 9.8125rem);
+    margin-block-start: 8px;
   }
 
   .design-footer-bottom {
-    margin-block-start: 23vh;
-    margin-inline-start: 0vw;
+    margin-block-start: 1vh;
+    margin-inline-start: 2vw;
   }
 }
