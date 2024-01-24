@@ -32,7 +32,7 @@ button:hover {
 
 .header {
   padding: 10px;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .decorative {
