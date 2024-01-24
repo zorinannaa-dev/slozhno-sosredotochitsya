@@ -23,17 +23,16 @@ button:hover {
   font-family: "IBM Plex Mono", sans-serif;
   min-width: 375px;
   margin: auto;
-  background-image: url(../images/cover-image-dark.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .header {
   padding: 10px;
   height: 100vh;
   max-height: 668px;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .decorative {
