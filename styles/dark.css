@@ -18,7 +18,7 @@
   background-image: url(../images/cover-image-dark.png);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 10px cover;
+  background-size: cover;
   background-attachment: fixed;
 }
 
