@@ -23,12 +23,12 @@ button:hover {
   font-family: "IBM Plex Mono", sans-serif;
   min-width: 375px;
   margin: auto;
+  background-attachment: fixed;
 }
 
 .header {
   padding: 10px;
   height: 100vh;
-  max-height: 668px;
   background-image: url(../images/cover-image-dark.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -146,7 +146,7 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  margin-block-start: 40px;
+  margin-block-start: -17px;
 }
 
 .title-decor {
@@ -182,7 +182,11 @@ button:hover {
 }
 
 .arctical__paragraph-indent {
-  margin-block-end: 50px;
+  margin-block-end: 67px;
+}
+
+.arctical__paragraph-indent-less {
+  margin-block-end: 48px;
 }
 
 .accent-word {
