@@ -1,53 +1,43 @@
-:root .theme-dark {
-  --accent-color: #ff0070;
-  --main-color: #000028;
-  --logo-color: #db00ff;
-  --arcticle-color: #f1b2ce;
+:root .theme_dark {
+  --accent-color: var(--accent-color-dark);
+  --main-color: var(--main-color-dark);
+  --logo-color: var(--logo-color-dark);
+  --arcticle-color: var(--arcticle-color-dark);
+  --border-bottom-color: var(--accent-color-dark);
+  --button-hover-color: var(--accent-color-dark);
+  --design-color: var(--accent-color-dark);
+  --button-color: var(--accent-color-dark);
+  --text-shadow: var(--accent-color);
+  --arcticle-title-color: var(--main-color);
+  --title-thin: var(--main-color-dark);
+  --paragraph-color: var(--arcticle-color-dark);
+  --accent-word-color: var(--accent-color-dark);
+
+  --visibility: visible;
+
+  --page-background-color: var(--main-color);
+  --page-background-image: url("../images/cover-image-dark.png");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #ff0070;
-    --main-color: #000028;
-    --logo-color: #db00ff;
-    --arcticle-color: #f1b2ce;
+    --accent-color: var(--accent-color-dark);
+    --main-color: var(--main-color-dark);
+    --logo-color: var(--logo-color-dark);
+    --arcticle-color: var(--arcticle-color-dark);
+    --border-bottom-color: var(--accent-color-dark);
+    --button-hover-color: var(--accent-color-dark);
+    --design-color: var(--accent-color-dark);
+    --button-color: var(--accent-color-dark);
+    --text-shadow: var(--accent-color);
+    --arcticle-title-color: var(--main-color);
+    --title-thin: var(--arcticle-color-dark);
+    --paragraph-color: var(--arcticle-color-dark);
+    --accent-word-color: var(--accent-color-dark);
+
+    --visibility: visible;
+  
+    --page-background-color: var(--main-color);
+    --page-background-image: url("../images/cover-image-dark.png");
   }
-}
-
-.page.theme_dark .design::before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5px 2px var(--accent-color);
-}
-
-.page.theme_dark .rec {
-  position: relative;
-  color: var(--accent-color);
-  text-transform: uppercase;
-  text-align: right;
-  font-family: inherit;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px; /* 138.889% */
-  margin-inline-end: 2.96px;
-}
-
-.page.theme_dark .design-bottom {
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.page.theme_dark .design-footer {
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
-}
-
-.page.theme_dark .design-footer-bottom {
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
 }
