@@ -3,15 +3,10 @@
   --main-color: var(--main-color-dark);
   --logo-color: var(--logo-color-dark);
   --arcticle-color: var(--arcticle-color-dark);
-  --border-bottom-color: var(--accent-color-dark);
-  --button-hover-color: var(--accent-color-dark);
+  --text-shadow: var(--accent-color-dark);
   --design-color: var(--accent-color-dark);
-  --button-color: var(--accent-color-dark);
-  --text-shadow: var(--accent-color);
-  --arcticle-title-color: var(--main-color);
-  --title-thin: var(--main-color-dark);
-  --paragraph-color: var(--arcticle-color-dark);
-  --accent-word-color: var(--accent-color-dark);
+  --design-color-transparent: var(--accent-color-transparent-dark);
+  --arcticle-title-color: var(--main-color-dark);
 
   --visibility: visible;
 
@@ -25,15 +20,10 @@
     --main-color: var(--main-color-dark);
     --logo-color: var(--logo-color-dark);
     --arcticle-color: var(--arcticle-color-dark);
-    --border-bottom-color: var(--accent-color-dark);
-    --button-hover-color: var(--accent-color-dark);
+    --text-shadow: var(--accent-color-dark);
     --design-color: var(--accent-color-dark);
-    --button-color: var(--accent-color-dark);
-    --text-shadow: var(--accent-color);
-    --arcticle-title-color: var(--main-color);
-    --title-thin: var(--arcticle-color-dark);
-    --paragraph-color: var(--arcticle-color-dark);
-    --accent-word-color: var(--accent-color-dark);
+    --design-color-transparent: var(--accent-color-transparent-dark);
+    --arcticle-title-color: var(--main-color-dark);
 
     --visibility: visible;
   
