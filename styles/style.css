@@ -12,7 +12,7 @@ button:focus-visible {
 }
 
 button:hover {
-  border: 1px solid var(--design-color);
+  border: 1px solid var(--design-color-transparent);
 }
 
 .page {
@@ -21,13 +21,14 @@ button:hover {
   margin: auto;
   background-attachment: fixed;
   background-image: var(--page-background-image);
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--page-background-color);
 }
 
 .header {
+  position: relative;
   padding: 10px;
   height: 100vh;
   min-height: 668px;
@@ -56,8 +57,7 @@ button:hover {
 .caption::before {
   content: "rec";
   position: absolute;
-  right: 18px;
-  top: -7px;
+  inset: -8px 17px 11px auto;
   color: var(--accent-color);
   text-transform: uppercase;
   text-align: right;
@@ -70,15 +70,24 @@ button:hover {
   visibility: var(--visibility);
 }
 
-.caption::after {
+.decorated-zone::before {
   content: "";
   position: absolute;
-  width: 25.038px;
-  height: 24.999px;
-  right: -8px;
-  top: -7px;
+  block-size: 25px;
+  inline-size: 25px;
+  inset: 10px 10px 10px auto;
   border-right: 1px solid var(--design-color);
   border-top: 1px solid var(--design-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  inset: auto 10px 10px 10px;
+  border-left: 1px solid var(--design-color);
+  border-bottom: 1px solid var(--design-color);
 }
 
 .header__theme-menu-list {
@@ -111,7 +120,7 @@ button:hover {
 }
 
 .header__theme-menu-button_active:disabled {
-  border: 1px solid var(--design-color-transparent);
+  border: 1px solid var(--design-color);
   pointer-events: none;
 }
 
@@ -133,15 +142,8 @@ button:hover {
   justify-content: flex-end;
 }
 
-.main__paragraph::before {
-  content: "";
-  position: absolute;
-  width: 25.038px;
-  height: 24.999px;
-  right: 340px;
-  top: 632px;
-  border-left: 1px solid var(--design-color);
-  border-bottom: 1px solid var(--design-color);
+.arcticle {
+  margin-block-start: 41px;
 }
 
 .design-bottom {
@@ -149,7 +151,6 @@ button:hover {
 }
 
 .main {
-  background-color: var(--page-background-color);
   margin: 10px;
 }
 
@@ -161,7 +162,6 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  margin-block-start: 40px;
 }
 
 .title-decor {
@@ -204,10 +204,6 @@ button:hover {
   margin-block-end: 50px;
 }
 
-.title-decor-thin + .arctical__paragraph:last-child {
-  margin-block-end: 48px;
-}
-
 .accent-word {
   text-decoration: none;
   text-shadow: 1px 1px var(--accent-color);
@@ -248,6 +244,7 @@ button:hover {
 }
 
 .footer {
+  position: relative;
   margin-block-start: 40px;
   height: 100vh;
   min-height: 668px;
@@ -270,50 +267,27 @@ button:hover {
   margin-block-start: 0px;
 }
 
-.footer__logo::before {
-  content: "";
-  position: absolute;
-  width: 25.038px;
-  height: 24.999px;
-  right: 10px;
-  bottom: -5470px;
-  border-right: 1px solid var(--design-color);
-  border-top: 1px solid var(--design-color);
-}
-
-.footer__logo::after {
-  content: "";
-  position: absolute;
-  width: 25.038px;
-  height: 24.999px;
-  right: 340px;
-  bottom: -6092px;
-  border-left: 1px solid var(--design-color);
-  border-bottom: 1px solid var(--design-color);
-}
-
 @media (min-width: 768px) {
-  .page {
-    /* min-width: 768px; */
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-  }
-
   .header {
+    padding: 0px;
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
   }
 
-  .main__title-location {
-    margin-block-start: 107px;
-    margin-inline-start: -8px;
+  .decorated-zone::before {
+    inset: 20px 20px 20px auto;
+  }
+  
+  .decorated-zone::after {
+    inset: auto 20px 20px 20px;
   }
 
-  .decorative {
-    align-items: flex-end;
-    margin-block-start: 35px;
-    margin-inline-end: 9px;
+  .arcticle {
+    margin-block-start: 60px;
+  }
+
+  .title-paragraph .title-decor {
+    margin-block-start: 0px;
   }
 
   .caption {
@@ -322,39 +296,61 @@ button:hover {
   }
 
   .header__theme-menu-item:first-child {
-    margin-block-start: 148px;
+    margin-block-start: 0px;
+  }
+
+  .decorative__nav {
+    align-self: center;
   }
 
   .header__theme-menu-list {
-    margin-inline-end: 11px;
+    margin-block-end: 0px;
+    margin-inline-end: 20px;
   }
 
   .main__paragraph {
     width: 364px;
+    margin-inline-end: 20px;
+    margin-block-end: 0px;
   }
 
-  .main__paragraph::before {
-    right: 722px;
-    top: 980px;
+  .header .title-decor:first-child {
+    margin-block-start: 0px;
+  }
+
+  .main__title {
+    margin-block-end: 0px;
   }
 
   .main__paragraph__wrapper {
-    margin-block-start: 86px;
-    margin-block-end: 468px;
-    margin-inline-end: 10px;
-    display: flex;
-    justify-content: flex-end;
+    align-self: center;
+    justify-self: right;
   }
 
-  .arcticle__big {
+  .arcticle__concentration {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
   }
 
-  .arctical__title__big {
-    padding-block-start: 10px;
+  .arcticle:nth-child(2) {
+    margin-block-start: 28px;
+  }
+
+  .arcticle:nth-child(3) {
+    margin-block-start: 61px;
+  }
+
+  .arcticle:nth-child(4) {
+    margin-block-start: 30px;
+  }
+
+  .arcticle:nth-child(4) .title-decor {
+    margin-block-start: 0px;
+  }
+
+  .arctical__title__concentration {
     margin-inline-start: 11px;
     width: 50%;
     height: 100%;
@@ -369,7 +365,6 @@ button:hover {
   .arcticle__title_grid {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr;
-    margin-block-start: 29px;
     margin-inline-start: 10px;
   }
 
@@ -378,18 +373,9 @@ button:hover {
     margin-inline-end: 10px;
   }
 
-  section:nth-child(3) h2:first-child {
-    margin-block-start: 22px;
-  }
-
-  .title-decor-thin + .arctical__paragraph:last-child {
-    margin-block-end: 58px;
-  }
-
   .title-decor-images {
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-    margin-block-start: -29px;
   }
 
   .image {
@@ -435,37 +421,15 @@ button:hover {
   .footer {
     margin-block-start: 54px;
   }
-
-  .footer__logo::before {
-    right: 20px;
-    bottom: -3847px;
-  }
-
-  .footer__logo::after {
-    right: 722px;
-    bottom: -4806px;
-  }
 }
 
 @media (min-width: 1024px) {
-  .page {
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-  }
-
-  .decorative {
-    margin-inline-end: 10px;
-    margin-block-start: 8px;
-  }
-
   .decorative__nav {
     display: flex;
     flex-direction: row-reverse;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-inline-start: 38vw;
-    margin-block-start: 11px;
+    justify-content: center;
+    align-self: flex-start;
+    margin-block-start: 20px;
   }
 
   .caption {
@@ -473,24 +437,28 @@ button:hover {
     top: 27px;
   }
 
-  .caption::before {
-    right: 18px;
-    top: -7px;
+  .arcticle {
+    margin-block-start: 60px;
   }
 
-  .caption::after {
-    right: -8px;
-    top: -7px;
-  }
-
-  .main__paragraph::before {
-    right: 980px;
-    top: 724px;
-  }
-
-  .without-margin {
+  .arcticle:nth-child(2) {
     margin-block-start: 0px;
-    margin-block-end: 0px;
+  }
+
+  .arcticle:nth-child(2) .title-decor {
+    margin-block-start: 0px;
+  }
+
+  .arcticle:nth-child(3) {
+    margin-block-start: 58px;
+  }
+
+  .arcticle:nth-child(4) {
+    margin-block-start: 0px;
+  }
+
+  .arctical__big {
+    margin-block-start: 57px;
   }
 
   .header__theme-menu-item:first-child {
@@ -503,13 +471,6 @@ button:hover {
 
   .main__title {
     font-size: clamp(1.125rem, -3.8947rem + 21.4176vw, 9.8125rem);
-    margin-block-start: 209px;
-  }
-
-  .main__paragraph__wrapper {
-    margin-block-start: 94px;
-    margin-inline-end: 10px;
-    margin-block-end: 100px;
   }
 
   .main__paragraph {
@@ -518,14 +479,13 @@ button:hover {
 
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 10px;
+    gap: 11px;
     justify-content: center;
     align-self: flex-start;
-    margin-block-start: 0px;
   }
 
   .card {
-    margin-inline-start: 18px;
+    margin-inline-start: 8px;
   }
 
   .title-decor-images {
@@ -545,26 +505,16 @@ button:hover {
     flex-wrap: wrap;
   }
 
-  .arctical__title__big {
-    padding-block-start: 9px;
-  }
-
   .arcticle-width {
     width: 32%;
+    margin-block-start: 19px;
+  }
+
+  .footer {
+    margin-block-start: 54px;
   }
 
   .footer__logo {
     font-size: clamp(1.125rem, -3.8947rem + 21.4176vw, 9.8125rem);
-    margin-block-start: 103px;
-  }
-
-  .footer__logo::before {
-    right: 20px;
-    bottom: -3517px;
-  }
-
-  .footer__logo::after {
-    right: 979px;
-    bottom: -4220px;
   }
 }
