@@ -32,6 +32,8 @@ button:hover {
   padding: 10px;
   height: 100vh;
   min-height: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .decorative {
@@ -132,7 +134,7 @@ button:hover {
   font-weight: 700;
   line-height: 82.5%; /* 95.7px */
   text-align: left;
-  margin-block-end: 55px;
+  margin-block-end: 35px;
 }
 
 .main__paragraph {
@@ -144,6 +146,7 @@ button:hover {
 
 .arcticle {
   margin-block-start: 41px;
+  margin-block-end: 0px;
 }
 
 .design-bottom {
@@ -194,14 +197,6 @@ button:hover {
   font-weight: 400;
   line-height: 23.4px; /* 130% */
   margin-block-start: 10px;
-}
-
-.card:last-child {
-  margin-block-end: 50px;
-}
-
-.paragraph:last-child {
-  margin-block-end: 50px;
 }
 
 .accent-word {
@@ -267,32 +262,44 @@ button:hover {
   margin-block-start: 0px;
 }
 
+@media (min-width: 400px) {
+  .main__paragraph {
+    width: 364px;
+    margin-inline-end: 20px;
+    margin-block-end: 19px;
+  }
+
+  .main__paragraph__wrapper {
+    align-self: center;
+    justify-self: right;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     padding: 0px;
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
   }
 
   .decorated-zone::before {
     inset: 20px 20px 20px auto;
   }
-  
+
   .decorated-zone::after {
     inset: auto 20px 20px 20px;
   }
 
-  .arcticle {
-    margin-block-start: 60px;
-  }
-
-  .title-paragraph .title-decor {
+  .title-decor {
     margin-block-start: 0px;
   }
 
   .caption {
     right: 29px;
     top: 28px;
+  }
+
+  .title-center {
+    align-self: center;
+    justify-self: flex-start;
   }
 
   .header__theme-menu-item:first-child {
@@ -304,27 +311,13 @@ button:hover {
   }
 
   .header__theme-menu-list {
+    margin-block-start: 20px;
     margin-block-end: 0px;
     margin-inline-end: 20px;
-  }
-
-  .main__paragraph {
-    width: 364px;
-    margin-inline-end: 20px;
-    margin-block-end: 0px;
-  }
-
-  .header .title-decor:first-child {
-    margin-block-start: 0px;
   }
 
   .main__title {
     margin-block-end: 0px;
-  }
-
-  .main__paragraph__wrapper {
-    align-self: center;
-    justify-self: right;
   }
 
   .arcticle__concentration {
@@ -332,22 +325,13 @@ button:hover {
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
-  }
-
-  .arcticle:nth-child(2) {
-    margin-block-start: 28px;
-  }
-
-  .arcticle:nth-child(3) {
     margin-block-start: 61px;
   }
 
-  .arcticle:nth-child(4) {
-    margin-block-start: 30px;
-  }
-
-  .arcticle:nth-child(4) .title-decor {
-    margin-block-start: 0px;
+  .arcticle__about {
+    display: grid;
+    gap: 19px;
+    margin-block-start: 78px;
   }
 
   .arctical__title__concentration {
@@ -360,6 +344,8 @@ button:hover {
     margin-inline-start: 20px;
     margin-inline-end: 10px;
     width: 100%;
+    display: grid;
+    gap: 20px;
   }
 
   .arcticle__title_grid {
@@ -371,15 +357,28 @@ button:hover {
   .paragraph {
     margin-inline-start: 10px;
     margin-inline-end: 10px;
+    display: grid;
+    gap: 20px;
+  }
+
+  .title-decor-thin {
+    margin-block-start: 0px;
+  }
+  .arcticle__advice {
+    margin-block-start: 82px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .arcticle__pictures {
+    margin-block-start: 80px;
   }
 
   .title-decor-images {
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-  }
-
-  .image {
-    object-fit: cover;
   }
 
   .images {
@@ -429,44 +428,11 @@ button:hover {
     flex-direction: row-reverse;
     justify-content: center;
     align-self: flex-start;
-    margin-block-start: 20px;
   }
 
   .caption {
     right: 28px;
     top: 27px;
-  }
-
-  .arcticle {
-    margin-block-start: 60px;
-  }
-
-  .arcticle:nth-child(2) {
-    margin-block-start: 0px;
-  }
-
-  .arcticle:nth-child(2) .title-decor {
-    margin-block-start: 0px;
-  }
-
-  .arcticle:nth-child(3) {
-    margin-block-start: 58px;
-  }
-
-  .arcticle:nth-child(4) {
-    margin-block-start: 0px;
-  }
-
-  .arctical__big {
-    margin-block-start: 57px;
-  }
-
-  .header__theme-menu-item:first-child {
-    margin-block-start: 0px;
-  }
-
-  .card:last-child {
-    margin-block-end: 82px;
   }
 
   .main__title {
@@ -482,6 +448,7 @@ button:hover {
     gap: 11px;
     justify-content: center;
     align-self: flex-start;
+    margin-inline-end: 0px;
   }
 
   .card {
@@ -490,7 +457,6 @@ button:hover {
 
   .title-decor-images {
     margin-inline-start: 10px;
-    margin-block-start: -60px;
   }
 
   .arcticle__title_grid {
@@ -498,7 +464,6 @@ button:hover {
   }
 
   .paragraph {
-    margin-inline-start: 10px;
     margin-inline-end: 6px;
     display: flex;
     gap: 19px;
@@ -507,11 +472,6 @@ button:hover {
 
   .arcticle-width {
     width: 32%;
-    margin-block-start: 19px;
-  }
-
-  .footer {
-    margin-block-start: 54px;
   }
 
   .footer__logo {
