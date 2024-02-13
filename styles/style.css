@@ -145,8 +145,12 @@ button:hover {
 }
 
 .arcticle {
-  margin-block-start: 41px;
+  margin-block-start: 50px;
   margin-block-end: 0px;
+}
+
+.arcticle__concentration {
+  margin-block-start: 40px;
 }
 
 .design-bottom {
